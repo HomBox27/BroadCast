@@ -61,7 +61,7 @@ client.on('message', message => { // هاذا للبرودكسات
 client.on('message', message => { // هاذا للبرودكسات
         var prefix = '§'; // هنا تقدر تغير البرفكس
 	var command = message.content.split(" ")[0];
-	if(command == prefix + 'bc') { // الكوماند !bc
+	if(command == prefix + 'help') { // الكوماند !bc
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
 		var args = message.content.split(' ').slice(1).join(' ');
 		if(message.author.bot) return;
