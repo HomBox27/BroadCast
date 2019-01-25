@@ -58,7 +58,26 @@ client.on('message', message => { // هاذا للبرودكسات
 	}
 });
 
-
-
+client.on('message', message => { // هاذا للبرودكسات
+        var prefix = '§'; // هنا تقدر تغير البرفكس
+	var command = message.content.split(" ")[0];
+	if(command == prefix + 'bc') { // الكوماند !bc
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
+		var args = message.content.split(' ').slice(1).join(' ');
+		if(message.author.bot) return;
+		if(!args) return message.channel.send(`**➥ Useage:** ${prefix}help كلامك`);
+		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
+		
+		let bcSure = new Discord.RichEmbed()
+		.setTitle(`**لإرسال رسالة للأعضاء عليك كتابة `)
+		.setThumbnail(client.user.avatarURL)
+		.setColor('RANDOM')
+		.setDescription(`**\n ➥ §bc**\n\n${args}`)
+		.setTimestamp()
+		.setFooter(message.author.tag, message.author.avatarURL)
+			});
+		})
+	}
+});
 
 client.login(process.env.BOT_TOKEN);
