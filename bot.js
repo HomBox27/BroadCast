@@ -18,7 +18,7 @@ client.on('message', message => { // هاذا للبرودكسات
 		if(!args) return message.channel.send(`**➥ Useage:** ${prefix}bc كلامك`);
 		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
 		let bcSure = new Discord.RichEmbed()
-		.setTitle(`:mailbox_with_mail: **هل انت متأكد انك تريد ارسال رسالتك الى** ${message.guild.memberCount} **عضو**`)
+		.setTitle(`:mailbox_with_mail: **هل انت55 متأكد انك تريد ارسال رسالتك الى** ${message.guild.memberCount} **عضو**`)
 		.setThumbnail(client.user.avatarURL)
 		.setColor('RANDOM')
 		.setDescription(`**\n:envelope: ➥ رسالتك**\n\n${args}`)
