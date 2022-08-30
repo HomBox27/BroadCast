@@ -1,13 +1,7 @@
-{
-  "name": "TiGeR BroadCast",
-  "description": "By LioN_Dz",
-  "version": "0.0.0",
-  "main": "bot.js",
-  "scripts": {
-    "start": "node bot.js"
-  },
-  "dependencies": {
-    "discord.js": "11.4.2",
-    "request": "2.81.0"
-  }
-}
+"scripts": {
+        "heroku-postbuild": "npm run build"
+    },
+"engines": {
+        "npm": "5.6.0",
+        "node": "8.10.0"
+      }
